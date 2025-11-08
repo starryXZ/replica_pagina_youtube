@@ -1,0 +1,261 @@
+@import url('reset.css');
+
+header {
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    height: 56px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#left, #center, #right {
+    display: flex;
+    align-items: center;
+}
+
+#left {
+    flex: 1;
+}
+
+#center {
+    flex: 2;
+    display: inline-flex;
+    justify-content: center;
+}
+
+#right {
+    flex: 1;
+    justify-content: flex-end;
+    margin-right: 28px;
+    gap: 24px;
+}
+
+header .medium_margin-top{
+    margin: 18px;
+}
+header form{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin: 0 8px;
+    padding: 0 4px;
+    flex: 1;
+    max-width: 640px;
+}
+
+header form input {
+    height: 100%;
+    padding: 0 16px;
+    border: 1px solid #ccc;
+    border-radius: 40px 0 0 40px;
+    border-right: none;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+}
+
+header form input:focus {
+    border-color: #1c62b9;
+}
+
+header form button {
+    height: 100%;
+    width: 64px;
+    border: 1px solid #ccc;
+    border-radius: 0 40px 40px 0;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header form button:hover {
+    background-color: #f0f0f0;
+}
+
+.container_Main{
+    display: flex;
+    margin-top: 56px;
+    background-color: #F9F9F9;
+}
+.titles{
+    margin: 16px;
+    margin-left: 0px;
+}
+.titles p{
+    display: inline-flex;
+    justify-content: left;
+}
+header .icon_menu{
+    margin: 16px;
+}
+
+header .profile{
+    width: 32px;
+    height: 32px;
+
+}
+
+main{
+    height: auto;
+    width: 70vw;
+    display: inline-flex;
+    padding: 18px;
+    padding-left: 75px;
+    padding-right: 0;
+    justify-content: flex-start;
+    flex-direction: column;
+
+
+}
+
+main img{
+    width: 100%;
+    height: 81%;
+    max-width: 1280px; /* Tamanho máximo padrão do player do YouTube */
+}
+main .perfil {
+    display: inline-flex;
+    justify-content: space-between;
+}
+main .perfil img {
+    width: 42px;
+    height: 42px;
+}
+main .perfil #chanel_text {
+    display: inline;
+    flex-direction: column;
+    margin-left: 12px;
+    justify-content: start;
+}
+main .perfil .chanel_info{
+    margin-left: 0;
+}
+main .perfil .subscribe{
+     background-color: #c00;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+main .perfil .subscribe:hover{
+    background-color: #a00;
+}
+main .perfil div{
+    display: flex;
+    flex-direction: row;
+    margin-left: 12px;
+    align-items: center;
+}
+main .container img{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+/* Media Queries combinadas para padding e imagem */
+@media screen and (max-width: 1200px) {
+    main {
+        padding-left: 50px;
+    }
+    main img {
+        width: 95%;
+        height: 75%;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    main {
+        padding-left: 35px;
+    }
+    main img {
+        width: 90%;
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding-left: 25px;
+    }
+    main img {
+        width: 85%;
+        height: 65%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    main {
+        padding-left: 0px;
+    }
+    main img {
+        width: 80%;
+        height: 60%;
+    }
+}
+
+aside {
+    min-height: 100vh;
+    width: 30vw;
+    display: flex;
+    padding: 18px;
+    padding-left: 25px;
+    padding-right: 16px;
+    flex-direction: column;
+}
+
+aside .card {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+}
+
+aside .card img {
+    width: 168px;
+    height: 94px;
+    object-fit: cover;
+}
+
+aside .card_content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    flex: 1;
+    min-width: 0; /* Importante para permitir que o texto quebre */
+    margin-left: 16px;
+}
+
+aside .card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #0f0f0f;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita a 2 linhas */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    margin-bottom: 4px;
+}
+
+aside .card p {
+    font-size: 12px;
+    color: #606060;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Limita a 1 linha */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
